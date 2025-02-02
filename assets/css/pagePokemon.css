@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    width: 100vw;
+    padding: 10px; 
+}
+
+.pokedex-card {
+    padding: 2%; 
+    color: white;
+    width: 95vw;  
+    max-width: 600px; 
+    height: auto;
+    min-height: 70vh; 
+    display: flex;
+}
+
+.pokedex-header {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    height: 250px;
+    width: 250px;
+}
+
+
+.pokedex-header img {
+    height: 120px; 
+    display: block;
+    margin: 0; 
+}
+
+
+.pokedex-header h1 {
+    margin: 5px 0 0 0; 
+    font-size: 24px; 
+}
+
+.pokedex-body {
+    padding: 5%;
+    background: white;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    margin-top: -10%; 
+    border-radius: 10%;
+}
+
+.numberPage{
+    text-align: right;
+}
+
+.namePage{
+    text-align: left;
+}
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+
+.tabs span {
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.tabs span.active {
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+.info {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.info p {
+    margin: 5px 0;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .pokedex-card {
+        width: 90vw;  /* Mantém um tamanho grande em tablets */
+        max-width: 550px;
+        min-height: 70vh;
+    }
+
+    .pokedex-header {
+        padding: 5%;
+    }
+
+    .pokedex-body {
+        padding: 5%;
+    }
+
+    .tabs {
+        font-size: 14px;
+    }
+
+    .info {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pokedex-card {
+        width: 95vw;
+        max-width: 500px;
+        min-height: 65vh;
+        border-radius: 10px;
+    }
+
+    .tabs {
+        font-size: 12px;
+    }
+
+    .info {
+        font-size: 12px;
+    }
+}
